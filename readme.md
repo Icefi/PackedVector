@@ -4,7 +4,7 @@
 
     PackedVector is a kind of vectors,
     but for storing elements uses defined
-    number of elements
+    number of bits
 
 ## Building ##
 
