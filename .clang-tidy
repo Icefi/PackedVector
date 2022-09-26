@@ -1,0 +1,32 @@
+---
+Checks: >
+  clang-diagnostic-*,
+  clang-analyzer-*,
+  *,
+  -fuchsia-*,
+  -llvmlibc-*,
+  -llvm-header-guard,
+  -modernize-use-nodiscard,
+  -altera-unroll-loops,
+  -altera-id-dependent-backward-branch,
+  -hicpp-signed-bitwise,
+  -modernize-use-trailing-return-type,
+  -cppcoreguidelines-owning-memory,
+  -google-runtime-references,
+  -google-runtime-int,
+  -cppcoreguidelines-pro-bounds-pointer-arithmetic,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -cppcoreguidelines-avoid-non-const-global-variables,
+  -readability-magic-numbers,
+  -readability-function-cognitive-complexity,
+  -readability-const-return-type,
+  -cert-err58-cpp
+WarningsAsErrors: true
+HeaderFilterRegex: '.*/(packed_vector)/'
+AnalyzeTemporaryDtors: false
+FormatStyle:     file
+CheckOptions:
+  - key:   cppcoreguidelines-explicit-virtual-functions.IgnoreDestructors
+    value: '1'
+...
+
